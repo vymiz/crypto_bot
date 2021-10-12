@@ -5,10 +5,10 @@ from cls import *
 def help(message: telebot.types.Message):
     text='для начала работы бота необходимо ввести команду в следующем формате:\n' \
          '<какую монету меняем> <монета на которую меняем> <количество>\n' \
-         'для получения списка моент введите команду /coin'
+         'для получения списка моент введите команду /values'
     bot.reply_to(message, text)
 
-@bot.message_handler(commands=['coin'])
+@bot.message_handler(commands=['values'])
 def coin(message: telebot.types.Message):
     text = 'Доступные монеты: '
     for k in keys.keys():
